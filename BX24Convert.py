@@ -26,6 +26,9 @@ def main():
     b = image_array[:, 2::3]
     rgb_image = cv2.merge([b, g, r])
 
+    file_out = "frame.png"
+    cv2.imwrite(file_out, rgb_image)
+
     cv2.imshow('Image', rgb_image)
     cv2.waitKey(0)
     cv2.destroyAllWindows()
